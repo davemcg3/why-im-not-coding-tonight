@@ -30,7 +30,7 @@ header a:first-child {
 main {
   padding: 1em;
 }
-article {
+card {
   border: 1px solid black;
   padding: 0 1em 1em 1em;
   display: inline-block;
