@@ -12,8 +12,9 @@ api-docs/
 .vscode
 .idea
 
-# Ignore eleventy output when doing manuell tests
-_site/
+# Commenting out because github actions doesn't seem to make the site available
+# Ignore eleventy output when doing manual tests
+#_site/
 
 # Need this file for github actions to work correctly
 #package-lock.json
