@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "build-prod": "env NODE_ENV=production npx eleventy --pathprefix 'why-im-not-coding-tonight'",
     "serve": "npx eleventy --serve",
     "local": "npx @11ty/eleventy --serve --passthroughall",
     "debug": "DEBUG=* npx eleventy"
