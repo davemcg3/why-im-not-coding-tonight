@@ -11,5 +11,3 @@ I've been tossing this idea around in my head for a couple days and was finally 
 I'm an Engineering Manager at Beachbody working on the Beachbody OnDemand platform. This blog is my own and does not necessarily reflect the thoughts and opinions of my employer.
 
 I'm a full-stack developer with a history working in Ruby on Rails and PHP. I taught myself React and worked my way up into my current position running an engineering team building a large, complex React app and integrating with multiple APIs to power a production website operating at scale.
-
-<a href="https://twitter.com/davemcg3?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @davemcg3</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
