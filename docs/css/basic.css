@@ -34,6 +34,10 @@ card {
   border: 1px solid black;
   padding: 0 1em 1em 1em;
   display: inline-block;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 footer {
   padding: 2em 1em;
