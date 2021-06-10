@@ -8,7 +8,7 @@ pagination:
 ---
 <cards>
   {% for post in posts %}
-    <card>
+    <card class="borderBlinkReverse">
       <h1>
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </h1>

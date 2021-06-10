@@ -1,6 +1,6 @@
 --- 
 layout: base-layout.njk
---- 
+---
 # About
 ## Inspiration
 I've been tossing this idea around in my head for a couple days and was finally inspired to build the blog by this tweet, so let's talk about why I'm not coding tonight.
