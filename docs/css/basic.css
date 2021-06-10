@@ -27,14 +27,25 @@ header a:first-child {
   font-size: 200%;
   font-weight: bold;
 }
+nav {
+  padding: 1em;
+  text-align: right;
+}
 main {
   padding: 1em;
+}
+cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 card {
   border: 1px solid black;
   padding: 0 1em 1em 1em;
   display: inline-block;
   width: 250px;
+}
+card h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

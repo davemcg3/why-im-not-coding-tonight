@@ -1,3 +1,10 @@
+{%- if pagination.pages %}
+  <nav>
+    {%- for pageEntry in pagination.pages %}
+      <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }} </a>
+    {%- endfor %}
+  </nav>
+{% endif %}
 <footer>
   <a href="https://twitter.com/davemcg3?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @davemcg3</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </footer>

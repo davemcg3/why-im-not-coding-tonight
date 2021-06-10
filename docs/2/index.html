@@ -11,10 +11,30 @@
       <header>
     <a href="/">Why I'm Not Coding Tonight</a>
     <a href="/about">About</a>
+    <nav aria-labelledby="my-pagination">
+      <h2 id="my-pagination">This is my Pagination</h2>
+      <ol>
+        <li><a href="/">Page 1</a></li>
+        <li><a href="/1/">Page 2</a></li>
+        <li><a href="/2/" aria-current="page">Page 3</a></li>
+      </ol>
+    </nav>
   </header>
 
     <main>
       
+  <card>
+    <h1>
+      <a href="/posts/2021-05-20/">Prepping to move</a>
+    </h1>
+    <time datetime="2021-05-20T00:00:00.000Z">May 20, 2021</time>
+
+    <p>NOT CODING</p>
+
+    <a href="/posts/2021-05-20/"
+       aria-label="Read more on Prepping to move">Read more</a>
+  </card>
+
   <card>
     <h1>
       <a href="/posts/2021-05-19/">Built this blog</a>

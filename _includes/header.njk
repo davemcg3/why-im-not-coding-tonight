@@ -2,3 +2,10 @@
     <a href="{{ '/' | url }}">Why I'm Not Coding Tonight</a>
     <a href="{{ '/about' | url }}">About</a>
   </header>
+  {%- if pagination.pages %}
+    <nav>
+      {%- for pageEntry in pagination.pages %}
+        <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }} </a>
+      {%- endfor %}
+    </nav>
+  {% endif %}

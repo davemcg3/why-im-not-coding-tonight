@@ -2,20 +2,22 @@
 layout: base-layout.njk
 pagination:
   data: collections.post
-  size: 10
+  size: 12
   reverse: true
   alias: posts
 ---
-{% for post in posts %}
-  <card>
-    <h1>
-      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-    </h1>
-    <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+<cards>
+  {% for post in posts %}
+    <card>
+      <h1>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </h1>
+      <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
 
-    {% excerpt post %}
+      {% excerpt post %}
 
-    <a href="{{ post.url | url }}"
-       aria-label="Read more on {{ post.data.title }}">Read more</a>
-  </card>
-{% endfor %}
+      <a href="{{ post.url | url }}"
+         aria-label="Read post on {{ post.data.title }}">Read post</a>
+    </card>
+  {% endfor %}
+</cards>
