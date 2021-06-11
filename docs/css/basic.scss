@@ -6,11 +6,6 @@ body {
   /*background-color: #636b46;*/
   background-color: #111;
   font-family: helvetica, arial, sans-serif;
-  /*Photo by <a href="https://unsplash.com/@valentinbvs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Valentin BEAUVAIS</a> on <a href="https://unsplash.com/s/photos/cyberpunk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
-  background-image: url("/assets/images/valentin-beauvais-yVUQlyRlJSw-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 a {
   color: #00b8ff;
@@ -79,9 +74,6 @@ card h1 {
   text-overflow: ellipsis;
   color: #00b8ff;
   font-size: 150%;
-}
-card .glitcher {
-  font-size: 2em;
 }
 .readable {
   background-color: #d9d7ca;

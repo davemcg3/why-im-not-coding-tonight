@@ -14,7 +14,9 @@ pagination:
       </h1>
       <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
 
-      {% excerpt post %}
+      <div class="{% glitch? %} glitcher" data-text="{% strippedExcerpt post %}">
+        {% excerpt post %}
+      </div>
 
       <a href="{{ post.url | url }}"
          aria-label="Read post on {{ post.data.title }}">Read post</a>

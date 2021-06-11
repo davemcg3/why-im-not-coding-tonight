@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx eleventy",
-    "serve": "npx eleventy --serve",
+    "build": "npm run sass && eleventy",
+    "sass": "node-sass -o docs/css --output-style compact sass",
+    "serve": "npm run sass --parallel watch:* && npx eleventy --serve",
     "local": "npx @11ty/eleventy --serve --passthroughall",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "npm run sass -- --watch",
     "debug": "DEBUG=* npx eleventy"
   },
   "keywords": [],
@@ -14,6 +17,9 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "moment": "^2.29.1"
-  }
+    "moment": "^2.29.1",
+    "node-sass": "^6.0.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {}
 }

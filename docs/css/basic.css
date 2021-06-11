@@ -6,6 +6,11 @@ body {
   /*background-color: #636b46;*/
   background-color: #111;
   font-family: helvetica, arial, sans-serif;
+  /*Photo by <a href="https://unsplash.com/@valentinbvs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Valentin BEAUVAIS</a> on <a href="https://unsplash.com/s/photos/cyberpunk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+  background-image: url("/assets/images/valentin-beauvais-yVUQlyRlJSw-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 a {
   color: #00b8ff;
@@ -32,6 +37,7 @@ header {
 header a, header a:visited {
   /*color: #373f27;*/
   border: 2px solid #d600ff;
+  border-radius: 5px;
 }
 /*header a:hover, header a:active {*/
 /*  text-decoration: underline;*/
@@ -62,12 +68,20 @@ card {
   padding: 0 1em 1em 1em;
   display: inline-block;
   width: 250px;
-  background-color: #d9d7ca;
+  /*background-color: #d9d7ca;*/
+  background-color: #111;
+  color: white;
+  text-align: center;
 }
 card h1 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #00b8ff;
+  font-size: 150%;
+}
+card .glitcher {
+  font-size: 2em;
 }
 .readable {
   background-color: #d9d7ca;

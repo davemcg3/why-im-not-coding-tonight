@@ -1,5 +1,4 @@
 const moment = require('moment');
-
 moment.locale('en');
 
 module.exports = function (eleventyConfig) {
@@ -13,8 +12,18 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
+  eleventyConfig.addShortcode('strippedExcerpt', article => strippedExcerpt(article));
+  eleventyConfig.addShortcode('glitch?', () => glitch());
 
   eleventyConfig.addPassthroughCopy('css')
+  eleventyConfig.addPassthroughCopy("assets/images");
+
+  eleventyConfig.addWatchTarget('docs/css/*.css');
+
+  eleventyConfig.setBrowserSyncConfig({
+    files: ['docs/css/*.css']
+  });
+
   return {
     passthroughFileCopy: true,
     dir: {
@@ -49,4 +58,14 @@ function extractExcerpt(article) {
   });
 
   return excerpt;
+}
+function strippedExcerpt(article) {
+  return extractExcerpt(article).replace(/<\/?[^>]+(>|$)/g, "")
+}
+
+function glitch() {
+  if (Math.floor(Math.random() * 10) > 6) {
+    return "glitch";
+  }
+  return "";
 }
