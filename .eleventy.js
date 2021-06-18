@@ -16,7 +16,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('glitch?', () => glitch());
 
   eleventyConfig.addPassthroughCopy('css')
-  eleventyConfig.addPassthroughCopy("assets/images");
+  eleventyConfig.addPassthroughCopy('assets/images');
+  eleventyConfig.addPassthroughCopy('js');
 
   eleventyConfig.addWatchTarget('docs/css/*.css');
 
@@ -65,7 +66,8 @@ function strippedExcerpt(article) {
 
 function glitch() {
   if (Math.floor(Math.random() * 10) > 6) {
-    return "glitch";
+    // return "glitch";
+    return "";
   }
   return "";
 }
