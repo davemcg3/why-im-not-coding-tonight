@@ -20,7 +20,13 @@ pagination:
       </div>
 
       <a href="{{ post.url | url }}"
-         aria-label="Read post on {{ post.data.title }}">Read post</a>
+         aria-label="Read post on {{ post.data.title }}">
+           <button class="cybr-btn">
+             Read Post<span aria-hidden></span>
+             <span aria-hidden class="cybr-btn__glitch">Read Post</span>
+             <span aria-hidden class="cybr-btn__tag">R25</span>
+           </button>
+         </a>
     </card>
   {% endfor %}
 </cards>
