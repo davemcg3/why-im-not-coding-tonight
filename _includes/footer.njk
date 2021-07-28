@@ -1,8 +1,6 @@
 {%- if pagination.pages %}
   <nav>
-    {%- for pageEntry in pagination.pages %}
-      <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }} </a>
-    {%- endfor %}
+    {% include "paginator.njk" %}
   </nav>
 {% endif %}
 <footer>
