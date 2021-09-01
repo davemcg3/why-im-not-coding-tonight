@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -31,4 +31,3 @@ jobs:
         with:
           publish_dir: ./_docs
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          keep_files: true
