@@ -28,7 +28,7 @@ jobs:
 
       - name: Commit built files
         run: |
-          git config --local user.name "jpadfield"
+          git config --local user.name "davemcg3"
           git add ./docs
           git commit -m "Updating the repository GitHub html pages in the docs folder"
 
@@ -36,6 +36,11 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge to gh-pages
+        run: |
+          git checkout gh-pages
+          git merge main
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
