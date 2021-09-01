@@ -1,0 +1,10 @@
+      {#
+      {%- for pageEntry in pagination.pages %}
+        <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }} </a>
+      {%- endfor %}
+      #}
+      <a href="{{ pagination.href.first }}" aria-current="page">First</a> |
+      <a href="{{ pagination.href.previous }}" aria-current="Previous Page">Prev</a> |
+      <a>{{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</a> | {# TODO: add more pages here #}
+      <a href="{{ pagination.href.next }}" aria-current="Next Page">Next</a> |
+      <a href="{{ pagination.href.last }}" aria-current="Last Page">Last</a>
