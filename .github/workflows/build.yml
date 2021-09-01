@@ -39,6 +39,7 @@ jobs:
 
       - name: Merge to gh-pages
         run: |
+          git fetch
           git checkout gh-pages
           git merge main
 
