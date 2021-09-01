@@ -1,0 +1,44 @@
+name: Build Eleventy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Change working directory to gh-pages
+        run: |
+          git config --local user.name "davemcg3"
+          git fetch
+          git checkout gh-pages
+          git merge main --allow-unrelated-histories
+
+      - name: Install dependencies & build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit built files
+        run: |
+          git add ./docs
+          git commit -m "Updating the repository GitHub html pages in the docs folder"
+
+      - name: Push commit
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
