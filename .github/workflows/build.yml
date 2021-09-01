@@ -23,6 +23,7 @@ jobs:
 
       - name: Change working directory to gh-pages
         run: |
+          git config --local user.name "davemcg3"
           git fetch
           git checkout gh-pages
           git merge main --allow-unrelated-histories
@@ -34,7 +35,6 @@ jobs:
 
       - name: Commit built files
         run: |
-          git config --local user.name "davemcg3"
           git add ./_docs
           git commit -m "Updating the repository GitHub html pages in the docs folder"
 
