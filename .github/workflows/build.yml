@@ -31,3 +31,4 @@ jobs:
         with:
           publish_dir: ./_docs
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          keep_files: true
