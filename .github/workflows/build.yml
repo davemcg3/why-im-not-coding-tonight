@@ -26,6 +26,17 @@ jobs:
           npm ci
           npm run build
 
+      - name: Commit built files
+        run: |
+          git config --local user.name "jpadfield"
+          git add ./docs
+          git commit -m "Updating the repository GitHub html pages in the docs folder"
+
+      - name: Push commit
+        uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
