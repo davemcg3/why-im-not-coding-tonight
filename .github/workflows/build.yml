@@ -26,7 +26,7 @@ jobs:
           git config --local user.name "davemcg3"
           git fetch
           git checkout gh-pages
-          git merge main --allow-unrelated-histories
+          git merge -X theirs main --allow-unrelated-histories
 
       - name: Install dependencies & build
         run: |
