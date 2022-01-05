@@ -13,8 +13,7 @@ const glitchWords = [
   'freedom',
   'evade',
   'occupy',
-  'liberate',
-  'balance'
+  'liberate'
 ]
 
 //adjust glitches
