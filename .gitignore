@@ -20,6 +20,3 @@ api-docs/
 #package-lock.json
 
 test/stubs-layout-cache/_includes/*.js
-
-# Ignore staticly built files
-/docs/
